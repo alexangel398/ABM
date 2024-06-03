@@ -1,0 +1,46 @@
+﻿@model IEnumerable<ABMProveedores.Models.Proveedor>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Proveedores</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="ruta/a/tu/archivo/css/styles.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <h2>Lista de Proveedores</h2>
+
+        <table class="table table-striped mt-3">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Dirección</th>
+                    <th>Teléfono</th>
+                    <th>Email</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Nombre</td>
+                        <td>@item.Direccion</td>
+                        <td>@item.Telefono</td>
+                        <td>@item.Email</td>
+                        <td class="action-links">
+                            <a href="@Url.Action("Edit", "Proveedores", new { id = item.Id })" class="btn btn-primary btn-sm">Editar</a>
+                            <a href="@Url.Action("Delete", "Proveedores", new { id = item.Id })" class="btn btn-danger btn-sm">Eliminar</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <a href="@Url.Action("Create", "Proveedores")" class="btn btn-success mt-3">Agregar Nuevo Proveedor</a>
+    </div>
+</body>
+</html>

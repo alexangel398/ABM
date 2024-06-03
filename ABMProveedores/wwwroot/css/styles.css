@@ -1,0 +1,148 @@
+﻿/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2 {
+    color: #333;
+}
+
+/* Estilos para el header */
+.header-container {
+    background-color: #343a40;
+    padding: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+    .header-container .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header-container .nav {
+        display: flex;
+        align-items: center;
+    }
+
+    .header-container .nav-item {
+        margin-left: 20px;
+    }
+
+    .header-container .nav-link {
+        color: #ffffff;
+        transition: color 0.3s;
+    }
+
+        .header-container .nav-link:hover {
+            color: #ffc107;
+        }
+
+    .header-container .logo {
+        max-width: 10px; /* Tamaño aún más diminuto para el logo */
+        height: auto;
+        transition: transform 0.3s;
+    }
+
+        .header-container .logo:hover {
+            transform: scale(1.1);
+        }
+
+/* Estilos para la tabla */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+    .table th, .table td {
+        padding: 12px;
+        border: 1px solid #dddddd;
+        text-align: left;
+    }
+
+    /* Estilos para las filas impares */
+    .table tbody tr:nth-child(odd) {
+        background-color: #f2f2f2;
+    }
+
+/* Estilos para los enlaces de acción */
+.action-links a {
+    color: #007bff;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+    .action-links a:hover {
+        text-decoration: underline;
+    }
+
+/* Estilos para el botón de agregar nuevo proveedor */
+.add-button {
+    display: inline-block;
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+    .add-button:hover {
+        background-color: #218838;
+    }
+
+/* Estilos específicos para la vista de proveedores */
+.features-section .list-group-item {
+    background-color: #f8f9fa;
+    border: 1px solid #dddddd;
+}
+
+    .features-section .list-group-item:hover {
+        background-color: #e2e6ea;
+    }
+
+.guide-section .card {
+    border: 1px solid #dddddd;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+    .guide-section .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+/* Estilos para el footer */
+footer {
+    background-color: #343a40;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+    footer p {
+        margin: 0;
+    }
+/****************************botondeletevolveralalista*/
+.btn-back {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+    .btn-back:hover {
+        background-color: #495057;
+        border-color: #495057;
+    }
+
+    .btn-back:focus, .btn-back.focus {
+        box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.5);
+    }
